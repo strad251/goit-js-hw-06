@@ -21,3 +21,4 @@ const galleryMarkup = images.reduce((acc, item) => acc + createGalleryItem(item)
 
 galleryList.insertAdjacentHTML("afterbegin", galleryMarkup);
 galleryList.setAttribute("style", "list-style: none; display: flex; justify-content: center; align-items: center; gap: 50px;");
+
