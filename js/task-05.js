@@ -1,4 +1,4 @@
-"use strict";
+
 
 let input = document.querySelector("#name-input");
 let nameOutput = document.querySelector("#name-output");

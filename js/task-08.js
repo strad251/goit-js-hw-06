@@ -1,4 +1,4 @@
-"use strict";
+
 
 const loginFormEl = document.querySelector('.login-form')
 
