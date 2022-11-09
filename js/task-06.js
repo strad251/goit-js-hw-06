@@ -1,3 +1,5 @@
+"use strict";
+
 const inputEl = document.querySelector("#validation-input");
 
 const totalLenght = inputEl.getAttribute("data-length");
