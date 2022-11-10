@@ -19,7 +19,7 @@ const galleryList = document.querySelector(".gallery");
 
 const createGalleryItem = ({ url, alt }) => `<li><img src="${url}" alt="${alt}" width=260px></li>`;
 
-const galleryMarkup = images.reduce((acc, item) => acc + createGalleryItem(item), "");
+const galleryMarkup = images.map((createGalleryItem), "");
 
 galleryList.insertAdjacentHTML("afterbegin", galleryMarkup);
 galleryList.setAttribute("style", "list-style: none; display: flex; justify-content: center; align-items: center; gap: 50px;");

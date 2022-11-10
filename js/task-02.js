@@ -11,12 +11,13 @@ const ingredients = [
 
 const ulList = document.querySelector("#ingredients");
 
-const foodIngredients = ingredients.forEach(ingredient => {
+const foodIngredients = ingredients.map(ingredient => {
   let item = document.createElement('li');
   item.classList.add('item')
   item.innerHTML = ingredient;
-  ulList.append(item)
+  return item;
 });
 
+ulList.append(...foodIngredients);
 
 

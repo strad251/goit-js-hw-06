@@ -1,29 +1,20 @@
-
-
 const loginFormEl = document.querySelector('.login-form')
 
-const inputEls = document.querySelectorAll('input')
-
-const userData = {};
-
-const onLoginFormElSubmit = event => {
+function submit(event) {
+  const userData = {};
   event.preventDefault();
-
-  inputEls.forEach(input => {
-    if (input.value.trim() === '') {
-      alert("All fields required.")
-    }
-  });
-
-  userData.email = loginFormEl.elements.email.value;
-  userData.password = loginFormEl.elements.password.value;
   
+  if (!this.elements.email.value || !this.elements.password.value) {
+    alert(`All fields required!`);
+  }
+
+  userData.email = this.elements.email.value;
+  userData.password = this.elements.password.value;
+
   console.log(userData);
-  
-  event.target.reset();
-};
 
+  this.reset();
+}
 
-
-loginFormEl.addEventListener('submit', onLoginFormElSubmit);
+loginFormEl.addEventListener('submit', submit);
 
