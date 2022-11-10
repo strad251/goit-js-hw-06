@@ -6,6 +6,7 @@ function submit(event) {
   
   if (!this.elements.email.value || !this.elements.password.value) {
     alert(`All fields required!`);
+    return;
   }
 
   userData.email = this.elements.email.value;
